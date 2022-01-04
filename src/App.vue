@@ -1,28 +1,37 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="t">
+    <Tooltip
+      :text="{
+        header: `${text}`,
+        subtitle: `${text}`,
+        body: `${text}`
+      }"
+      position="bottom"
+    >
+      <slot>
+        <div>beyza erkan</div>
+      </slot>
+    </Tooltip>
   </div>
 </template>
-
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import Tooltip from '@/components/Tooltip.vue';
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    HelloWorld,
+    Tooltip,
   },
+  data(){
+    return {
+      text: "beyza",
+    }
+  }
 };
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.t{
+  margin-left: 45%;
+  margin-top:20%;
+
 }
 </style>
