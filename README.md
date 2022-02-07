@@ -2,6 +2,8 @@
 # Vue Tooltip
 A simple tooltip where you can give position, header, subtitle and body.
 
+![Tooltip](tooltip.png)
+
 ## Installation
 `$ npm i @beyzaerkan/vue-tooltip`
 
