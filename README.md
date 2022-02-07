@@ -1,24 +1,75 @@
-# vue-tooltip
 
-## Project setup
-```
-npm install
+# Vue Tooltip
+A simple tooltip where you can give position, header, subtitle and body.
+
+## Installation
+`$ npm i @beyzaerkan/vue-tooltip`
+
+## Usage
+```html
+<Tooltip
+  :text="{
+  header:  '....',
+  subtitle:  '....',
+  body:  '....'
+  }"
+  position="...."
+>
+  tooltip
+</Tooltip>
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Attributes
 
-### Compiles and minifies for production
-```
-npm run build
-```
+1.  **position**  - This is the position of the tooltip
+	```
+	position: right 
+	position: left 
+	position: top 
+	position: bottom
+	```
+3.  **text**  - This is the content to be displayed in the tooltip
+    ```
+    text: {
+	    header: String,
+	    subtitle: String,
+	    body: String
+	}
+    ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Example Vue Page
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```html
+<template>
+  <div>
+    <Tooltip
+      :text="{
+      header:  `${header}`,
+      subtitle:  `${subtitle}`,
+      body:  `${body}`
+      }"
+      position="...."
+    >
+    tooltip
+    </Tooltip>
+  </div>
+</template>
+
+<script>
+export  default {
+import Tooltip from "@beyzaerkan/vue-tooltip";
+  
+name:  "App",
+components: {
+    Tooltip,
+  },
+data() {
+  return {
+    header:  "....",
+    subtitle:  "....",
+    body:  "....",
+    };
+  },
+};
+</script>
+```

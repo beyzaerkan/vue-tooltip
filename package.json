@@ -1,14 +1,14 @@
 {
-  "name": "vue-tooltip",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@beyzaerkan/vue-tooltip",
+  "version": "1.0.0",
+  "main": "src/components/Tooltip.vue",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name vueTooltip ./src/components/Tooltip.vue",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
+    "core-js": "^3.21.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {

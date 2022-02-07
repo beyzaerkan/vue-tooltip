@@ -1,37 +1,36 @@
 <template>
   <div class="t">
-    <Tooltip
+    <vue-tooltip
       :text="{
-        header: `${text}`,
-        subtitle: `${text}`,
-        body: `${text}`
+        header: `${header}`,
+        subtitle: `${subtitle}`,
+        body: `${body}`
       }"
-      position="bottom"
+      position="left"
     >
-      <slot>
-        <div>beyza erkan</div>
-      </slot>
-    </Tooltip>
+      tooltip
+    </vue-tooltip> 
   </div>
 </template>
 <script>
-import Tooltip from '@/components/Tooltip.vue';
+//import Tooltip from "@/components/Tooltip.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Tooltip,
+    //Tooltip,
   },
-  data(){
+  data() {
     return {
-      text: "beyza",
-    }
-  }
+      header: "beyza",
+      subtitle: "erkan",
+      body: "here",
+    };
+  },
 };
 </script>
 <style>
-.t{
+.t {
   margin-left: 45%;
-  margin-top:20%;
-
+  margin-top: 20%;
 }
 </style>
