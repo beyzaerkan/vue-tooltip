@@ -1,6 +1,6 @@
 {
   "name": "@beyzaerkan/vue-tooltip",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "main": "src/components/Tooltip.vue",
   "scripts": {
     "serve": "vue-cli-service serve",
